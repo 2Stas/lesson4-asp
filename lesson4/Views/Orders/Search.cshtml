@@ -1,0 +1,23 @@
+﻿@model List<lesson4.Models.Order>
+
+<h1>Search Results</h1>
+
+@if (Model.Count == 0)
+{
+    <p>Orders not found.</p>
+}
+else
+{
+    @foreach (var order in Model)
+    {
+        <div>
+            <p>Id: @order.Id</p>
+            <p>Title: @order.Title</p>
+            <p>Description: @order.Description</p>
+            <p>Price: @order.Price</p>
+            <p>Quantity: @order.Quantity</p>
+            <p>Total: @order.TotalPrice</p>
+
+        </div>
+    }
+}

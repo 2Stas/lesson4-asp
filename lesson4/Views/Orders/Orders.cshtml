@@ -1,0 +1,15 @@
+﻿@model List<lesson4.Models.Order>
+
+<h1>Orders</h1>
+
+@foreach (var order in Model)
+{
+    <p>
+        Id: @order.Id <br />
+        Title: @order.Title <br />
+        Price: @order.Price <br />
+        Quantity: @order.Quantity <br />
+        Total: @order.TotalPrice
+    </p>
+
+}
